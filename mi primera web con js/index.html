@@ -17,15 +17,15 @@
     <main>
         <section id="formulario">
             <div class="container">
-                <h2>Datos personales</h2>
+                <h2 onmousemove="(mouseEvent())">Datos personales</h2>
 
                 <form action="#">
                     <div class="row">
 
                         <div class="col-6 mt-3">
                             <div class="contenedor-input">
-                                <label for="txtInput">Nombre:</label>
-                                <input id="txtInput" class="form-control" type="text" placeholder="Ingrese su nombre">
+                                <label for="txtNombre">Nombre:</label>
+                                <input id="txtNombre" class="form-control" type="text" placeholder="Ingrese su nombre">
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@
                         <div class="col-6 mt-3">
                             <div class="contenedor-input">
                                 <label for="txtApellido">Apellido:</label>
-                                <input id="txtApellido" class="form-control" type="text"
+                                <input onkeypress="cambioInput()" id="txtApellido" class="form-control" type="text"
                                     placeholder="Ingrese su apellido">
                             </div>
                         </div>
@@ -42,8 +42,7 @@
                         <div class="col-2 mt-3">
                             <div class="contenedor-input">
                                 <label for="txtEdad">Edad:</label>
-                                <input id="txtEdad" class="form-control" type="number"
-                                    placeholder="Ingrese su edad">
+                                <input id="txtEdad" class="form-control" type="number" placeholder="Ingrese su edad">
                             </div>
                         </div>
 
@@ -59,11 +58,36 @@
 
 
                         <div class="col-12 contenedor-btn">
-                            <button class="btn btn-primary">Guardar</button>
+                            <button onclick="guardar()" class="btn btn-primary">Guardar</button>
                         </div>
 
                     </div>
                 </form>
+
+
+                <div class="contenedor-info">
+
+                    <div class="contenedor-label">
+                        <label for="">Nombre:</label>
+                        <label id="lblNombre" for=""></label>
+                    </div>
+
+                    <div class="contenedor-label">
+                        <label for="">Apellido:</label>
+                        <label id="lblApellido" for=""></label>
+                    </div>
+
+                    <div class="contenedor-label">
+                        <label for="">Dirección:</label>
+                        <label id="lblDireccion" for=""></label>
+                    </div>
+
+                    <div class="contenedor-label">
+                        <label for="">Edad:</label>
+                        <label id="lblEdad" for=""></label>
+                    </div>
+
+                </div>
 
             </div>
         </section>
