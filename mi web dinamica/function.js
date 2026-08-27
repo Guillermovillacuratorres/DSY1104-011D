@@ -3,11 +3,13 @@ console.log("hola");
 
 var productos = [
     {
+        "id":1,
         "titulo":"Teclado",
         "imagen":"img/teclado.webp",
         "precio":5000
     },
     {
+        "id":2,
         "titulo":"GPU",
         "imagen":"img/gpu.webp",
         "precio":1500
@@ -50,7 +52,30 @@ for (const i of productos) {
     const botonAgregarCarro = document.createElement("button");
     botonAgregarCarro.textContent = "Agregar al carrito";
     botonAgregarCarro.className = "btn btn-primary";
+    botonAgregarCarro.addEventListener("click", function(){
+        guardar(i);
+    })
     contendorBoton.appendChild(botonAgregarCarro);
 
 }
 
+
+const LLAVE = "carrito";
+
+
+function guardar(producto) {
+    var storageActual = localStorage.getItem(LLAVE);
+    var lista = [];
+    if (storageActual != null) {
+        var storageParse = JSON.parse(storageActual);
+        //lista.push(producto);
+        //storageParse.push(lista);
+        storageParse.push(producto);
+        localStorage.setItem(LLAVE,JSON.stringify(storageParse));
+        console.log("STORAGE", storageParse);
+        
+    }else{
+        lista.push(producto);
+        localStorage.setItem(LLAVE,JSON.stringify(lista));
+    }
+}
