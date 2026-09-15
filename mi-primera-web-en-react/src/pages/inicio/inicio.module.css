@@ -1,0 +1,15 @@
+h1{
+    color: green;
+}
+
+
+.miEstilo{
+    font-size: 55px;
+    font-weight: bolder;
+    color: darkorange;
+}
+
+img{
+    height: 150px;
+    width: 100px;
+}
