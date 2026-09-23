@@ -3,6 +3,7 @@ import estilos from './inicio.module.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './inicio.css';
+import { useNavigate } from 'react-router-dom';
 
     function BasicExample() {
         return (
@@ -21,17 +22,24 @@ import './inicio.css';
     }
 
 function Inicio() {
+    const navigate = useNavigate();
     const [txtCorreo, setTxtCorreo] = useState("");
 
     function guardar() {
         console.log(txtCorreo);
     }
 
-
+    function irANosotros() {
+        console.log("Navegacion nosotros");
+        var idColor = 2000;
+        //navigate('/nosotros/1500');
+        navigate(`/nosotros/${idColor}`);
+        
+    }
 
     return(
         <>
-        
+        <button className='btn btn-primary m-5' onClick={irANosotros} >Ir a nosotros</button>
         <h1 className={`${estilos.miEstilo} tamanio`}>Hoola</h1>
         <img src="/public/img/conejo.jpg" alt="" />
         <button onClick={guardar}>Guardar</button>
