@@ -1,4 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
+import App_navbar from "../../components/navbar/navbar";
 
 function Nosotros() {
     const navigate = useNavigate();
@@ -49,7 +50,7 @@ function Nosotros() {
 
     return(
         <>
-            
+            <App_navbar/>
             <h1>Nosotros</h1>
             <button className="btn btn-danger" onClick={irAInicio}>Ir a inicio</button>
             {elementosHmtl}

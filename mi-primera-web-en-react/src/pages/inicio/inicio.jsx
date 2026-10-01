@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './inicio.css';
 import { useNavigate } from 'react-router-dom';
+import App_navbar from '../../components/navbar/navbar';
 
     function BasicExample() {
         return (
@@ -39,6 +40,7 @@ function Inicio() {
 
     return(
         <>
+        <App_navbar/>
         <button className='btn btn-primary m-5' onClick={irANosotros} >Ir a nosotros</button>
         <h1 className={`${estilos.miEstilo} tamanio`}>Hoola</h1>
         <img src="/public/img/conejo.jpg" alt="" />
