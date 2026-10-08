@@ -64,7 +64,7 @@ function Formulario() {
 
                 <div className="col-6">
                     <label htmlFor="txtNombre">Nombre:</label>
-                    <input onChange={(e) => setTxtnombre(e.target.value)} className="form-control" id="txtnombre" type="text" />
+                    <input onChange={(e) => setTxtnombre(e.target.value)} className="form-control" id="txtNombre" type="text" />
                 </div>
 
                 <div className="col-6">
