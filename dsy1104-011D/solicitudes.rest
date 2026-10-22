@@ -1,0 +1,8 @@
+####
+GET http://localhost:8080/vehiculo HTTP/1.1
+content-type: application/json
+
+
+### Obtener todos los vehiculos
+GET http://localhost:8080/vehiculo HTTP/1.1
+content-type: application/json
