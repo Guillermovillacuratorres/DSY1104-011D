@@ -1,0 +1,25 @@
+###Login
+POST http://98.84.150.237/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "hello",
+    "password": "hello"
+}
+
+###Registro
+POST http://98.84.150.237/auth/registro HTTP/1.1
+content-type: application/json
+
+{
+    "usernae": "hello",
+    "password": "hello"
+}
+
+
+###Obtener todos los vehiculos
+GET http://98.84.150.237/vehiculo HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZWxsbyIsImlhdCI6MTc5MzcxMjQyMCwiZXhwIjoxNzkzNzEzMzIwfQ.N7Ci8CO6CbvIlzGFzUtT_U7h20y6dOfSG5oANJJYOis
+content-type: application/json
+
+
